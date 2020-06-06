@@ -37,9 +37,7 @@ jobs:
       # Deprecated. Use node-version instead. Will not be supported after October 1, 2019
       version: 12
       - name: action-yarn
-      uses: comchangs/action-yarn@v0.1-beta
-      cmd: 
-          install
+        uses: comchangs/action-yarn@v0.1-beta
       - name: build project
         run: yarn build
       - name: install surge
