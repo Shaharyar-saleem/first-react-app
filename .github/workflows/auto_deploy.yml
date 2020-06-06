@@ -36,11 +36,11 @@ jobs:
       scope: # optional
       # Deprecated. Use node-version instead. Will not be supported after October 1, 2019
       version: 12
-      - name: action-yarn
-        uses: comchangs/action-yarn@v0.1-beta
-      - name: build project
-        run: yarn build
-      - name: install surge
-        run: npm install -g surge
-      - name: deploy surge
-        run: surge ./build http://flaky-fold.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
+    - name: action-yarn
+      uses: comchangs/action-yarn@v0.1-beta
+    - name: build project
+      run: yarn build
+    - name: install surge
+      run: npm install -g surge
+    - name: deploy surge
+      run: surge ./build http://flaky-fold.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
